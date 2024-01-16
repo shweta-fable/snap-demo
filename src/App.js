@@ -5,8 +5,8 @@ import Mind from './Mind';
 import { lazy } from 'react';
 import { startTransition } from 'react';
 import { Suspense } from 'react';
-const MindPreview = lazy(() => delayForDemo(import('./Mind.js')));
-const TestPreview = lazy(() => delayForDemo(import('./Test')));
+const MindPreview = lazy(() => (import('./Mind.js')));
+const TestPreview = lazy(() => (import('./Test')));
 
 
 function App() {
@@ -14,14 +14,15 @@ function App() {
     <div>
     <h1>Lazy Loading Example</h1>
     <Routes>
-      <Route path="/" element={
-        // <Suspense fallback={<>...</>}>
-          <TestPreview />
-        // </Suspense>
-      } />
+     
       <Route path="/products" element={
         // <Suspense fallback={<>...</>}>
           <MindPreview />
+        // </Suspense>
+      } />
+       <Route path="/" element={
+        // <Suspense fallback={<>...</>}>
+          <TestPreview />
         // </Suspense>
       } />
     </Routes>

@@ -5,9 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import SuspenseRouter from "./SuspenseRouter";
+import { hydrateRoot, createRoot } from 'react-dom/client';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+
+const StrictApp = ()=>(
   <React.StrictMode>
     <Suspense fallback={<>...</>}>
       <BrowserRouter>
@@ -15,7 +16,18 @@ root.render(
       </BrowserRouter>
     </Suspense>
   </React.StrictMode>
-);
+)
+
+const rootElement = document.getElementById('root');
+
+// hydrate is required by react-snap.
+if (rootElement.hasChildNodes()) {
+  hydrateRoot(rootElement, <StrictApp />);
+} else {
+  const root = createRoot(rootElement);
+  root.render(<StrictApp />);
+}
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
