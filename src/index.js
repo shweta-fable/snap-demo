@@ -1,12 +1,12 @@
 import React, { Suspense } from 'react';
-import ReactDOM from 'react-dom/client';
+// import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
-import SuspenseRouter from "./SuspenseRouter";
-import { hydrateRoot, createRoot } from 'react-dom/client';
-
+// import SuspenseRouter from "./SuspenseRouter";
+// import { hydrateRoot, createRoot } from 'react-dom/client';
+import { hydrate, render } from "react-dom";
 
 const StrictApp = ()=>(
   <React.StrictMode>
@@ -22,10 +22,13 @@ const rootElement = document.getElementById('root');
 
 // hydrate is required by react-snap.
 if (rootElement.hasChildNodes()) {
-  hydrateRoot(rootElement, <StrictApp />);
+  console.log('<< in hyderation')
+  hydrate(<StrictApp />, rootElement);
 } else {
-  const root = createRoot(rootElement);
-  root.render(<StrictApp />);
+  console.log('<< in render')
+
+  // const root = createRoot(rootElement);
+  render(<StrictApp />, rootElement);
 }
 
 
