@@ -13,7 +13,7 @@
     "react-helmet-async": "^2.0.4",
     "react-router-dom": "^6.21.2",
     "react-scripts": "5.0.1",
-    "react-snap": "sharefable/react-snap#remove-snap-format-options",
+    "react-snap": "sharefable/react-snap#upgrade-puppeteer-to-latest",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -23,7 +23,9 @@
     "eject": "react-scripts eject",
     "postbuild": "react-snap"
   },
-
+  "reactSnap": {
+    "puppeteerArgs": ["--no-sandbox"]
+  },
   "browserslist": {
     "production": [
       ">0.2%",

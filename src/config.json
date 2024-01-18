@@ -1,0 +1,368 @@
+{
+  "version": "1.0.0",
+  "urlMapping": {
+    "globalPrefix": "blog/",
+    "entries": {
+      "/": {
+        "filePath": "index",
+        "fileName": "index",
+        "frontmatter": {
+          "title": "The Den AI Blog",
+          "ogTitle": "The Den AI Blog",
+          "ogDescription": "A must follow blog for all the sales and marketing leaders."
+        },
+        "toc": []
+      },
+      "the-ultimate-product-demo-guide-for-sales-teams-to-close-more-deals": {
+        "filePath": "the-ultimate-product-demo-guide-for-sales-teams-to-close-more-deals",
+        "fileName": "the-ultimate-product-demo-guide-for-sales-teams-to-close-more-deals",
+        "frontmatter": {
+          "title": "The Ultimate Product Demo Guide for Sales Teams to Close More Deals",
+          "subtitle": "In this comprehensive guide, we will dive into everything you want to know about product demos and how you can nail your demos to close more deals.",
+          "date": "January 10, 2024",
+          "bannerImg": "https://github.com/sid-patri-fable/fable-blog/assets/155963795/adbda461-871c-45e7-8583-559cd0cd42f3",
+          "ogTitle": "The Ultimate Product Demo Guide for Sales Teams to Close More Deals",
+          "ogDescription": "Wondering what product demos are and how they can boost your sales? Look no further! This ultimate guide provides valuable insights and strategies to help you master the art of product demos.",
+          "ogImage": "https://github.com/sid-patri-fable/fable-blog/assets/155963795/adbda461-871c-45e7-8583-559cd0cd42f3)"
+        },
+        "toc": [
+          {
+            "depth": 2,
+            "value": "What exactly is a product demo?",
+            "data": {
+              "hProperties": {
+                "id": "what-exactly-is-a-product-demo"
+              },
+              "id": "what-exactly-is-a-product-demo"
+            }
+          },
+          {
+            "depth": 2,
+            "value": "What is the significance of product demos?",
+            "data": {
+              "hProperties": {
+                "id": "what-is-the-significance-of-product-demos"
+              },
+              "id": "what-is-the-significance-of-product-demos"
+            }
+          },
+          {
+            "depth": 2,
+            "value": "Are product demos and sales demos the same?",
+            "data": {
+              "hProperties": {
+                "id": "are-product-demos-and-sales-demos-the-same"
+              },
+              "id": "are-product-demos-and-sales-demos-the-same"
+            }
+          },
+          {
+            "depth": 2,
+            "value": "At what stage in the sales process does a product demo typically occur?",
+            "data": {
+              "hProperties": {
+                "id": "at-what-stage-in-the-sales-process-does-a-product-demo-typically-occur"
+              },
+              "id": "at-what-stage-in-the-sales-process-does-a-product-demo-typically-occur"
+            }
+          },
+          {
+            "depth": 2,
+            "value": "How to create a high-converting and successful product demo?",
+            "data": {
+              "hProperties": {
+                "id": "how-to-create-a-high-converting-and-successful-product-demo"
+              },
+              "id": "how-to-create-a-high-converting-and-successful-product-demo"
+            }
+          },
+          {
+            "depth": 3,
+            "value": "1. Have a comprehensive understanding of both your customer and your product",
+            "data": {
+              "hProperties": {
+                "id": "1-have-a-comprehensive-understanding-of-both-your-customer-and-your-product"
+              },
+              "id": "1-have-a-comprehensive-understanding-of-both-your-customer-and-your-product"
+            }
+          },
+          {
+            "depth": 3,
+            "value": "2. Tailor your demo to fit the prospect's unique problem",
+            "data": {
+              "hProperties": {
+                "id": "2-tailor-your-demo-to-fit-the-prospects-unique-problem"
+              },
+              "id": "2-tailor-your-demo-to-fit-the-prospects-unique-problem"
+            }
+          },
+          {
+            "depth": 3,
+            "value": "3. Create an agenda for the demo",
+            "data": {
+              "hProperties": {
+                "id": "3-create-an-agenda-for-the-demo"
+              },
+              "id": "3-create-an-agenda-for-the-demo"
+            }
+          },
+          {
+            "depth": 3,
+            "value": "4. Talk less, listen more",
+            "data": {
+              "hProperties": {
+                "id": "4-talk-less-listen-more"
+              },
+              "id": "4-talk-less-listen-more"
+            }
+          },
+          {
+            "depth": 3,
+            "value": "5. Show, don't tell",
+            "data": {
+              "hProperties": {
+                "id": "5-show-dont-tell"
+              },
+              "id": "5-show-dont-tell"
+            }
+          },
+          {
+            "depth": 3,
+            "value": "6. Always follow-up with a crisp email after the product demo",
+            "data": {
+              "hProperties": {
+                "id": "6-always-follow-up-with-a-crisp-email-after-the-product-demo"
+              },
+              "id": "6-always-follow-up-with-a-crisp-email-after-the-product-demo"
+            }
+          },
+          {
+            "depth": 3,
+            "value": "7. Review and improve your demo",
+            "data": {
+              "hProperties": {
+                "id": "7-review-and-improve-your-demo"
+              },
+              "id": "7-review-and-improve-your-demo"
+            }
+          },
+          {
+            "depth": 2,
+            "value": "What are interactive product demos and how can you use them?",
+            "data": {
+              "hProperties": {
+                "id": "what-are-interactive-product-demos-and-how-can-you-use-them"
+              },
+              "id": "what-are-interactive-product-demos-and-how-can-you-use-them"
+            }
+          }
+        ]
+      }
+    },
+    "baseUrl": "https://www.theden.ai/"
+  },
+  "name": "Fable Docs",
+  "favicons": {
+    "iconUrl": {
+      "16x16": "https://sharefable.com/favicon.png"
+    }
+  },
+  "props": {
+    "header": {
+      "logo": {
+        "imageUrl": "https://assets-global.website-files.com/6582e53622faa84165a9174f/6582eb16ed0b1cfa07fee730_Den%20AI%20Full%20Logo.svg",
+        "title": "The Den AI"
+      },
+      "navLinks": {
+        "alignment": "right",
+        "links": [
+          {
+            "title": "Product",
+            "url": "https://www.theden.ai/chatden"
+          },
+          {
+            "title": "Solutions",
+            "subtitle": "The ultimate demo platform for all your GTM needs",
+            "sublinks": [
+              {
+                "title": "Customer Support",
+                "url": "https://sharefable.com/solutions/marketing"
+              },
+              {
+                "title": "Lead Generation",
+                "url": "https://sharefable.com/solutions/sales"
+              },
+              {
+                "title": "e-Commerce",
+                "url": "https://sharefable.com/solutions/presales"
+              },
+              {
+                "title": "Internal Wiki",
+                "url": "https://sharefable.com/solutions/partnerships"
+              },
+              {
+                "title": "HR Assistant",
+                "url": "https://sharefable.com/solutions/partnerships"
+              },
+              {
+                "title": "Academic Research",
+                "url": "https://sharefable.com/solutions/partnerships"
+              }
+            ]
+          },
+          {
+            "title": "Pricing",
+            "url": "https://www.theden.ai/pricing"
+          },
+          {
+            "title": "Blog",
+            "url": "https://www.theden.ai/blog"
+          }
+        ]
+      },
+      "customComponent": "Header",
+      "cta": {
+        "title": "Hello world",
+        "link": "#somewhere"
+      },
+      "ctas": [
+        {
+          "type": "secondary",
+          "title": "Join the waitlist",
+          "url": "https://www.theden.ai/join-the-waitlist"
+        }
+      ]
+    },
+    "sidepanel": {
+      "showSidePanel": false
+    },
+    "content": {},
+    "footer": {
+      "logo": "https://assets-global.website-files.com/6582e53622faa84165a9174f/6582eb16ed0b1cfa07fee730_Den%20AI%20Full%20Logo.svg",
+      "copyright": "Den AI © 2024",
+      "links": [
+        {
+          "heading": "Chatden",
+          "links": [
+            {
+              "title": "Product",
+              "url": "https://www.theden.ai/chatden"
+            },
+            {
+              "title": "Pricing",
+              "url": "https://www.theden.ai/pricing"
+            }
+          ]
+        },
+        {
+          "heading": "Solutions",
+          "links": [
+            {
+              "title": "Customer Support",
+              "url": "https://www.theden.ai/solutions/customer-support"
+            },
+            {
+              "title": "Lead Generation",
+              "url": "https://www.theden.ai/solutions/lead-generation"
+            },
+            {
+              "title": "e-Commerce",
+              "url": "https://www.theden.ai/solutions/e-commerce"
+            },
+            {
+              "title": "Internal Wiki",
+              "url": "https://www.theden.ai/solutions/internal-wiki"
+            },
+            {
+              "title": "HR Assistant",
+              "url": "https://www.theden.ai/solutions/hr-assistant"
+            },
+            {
+              "title": "Academic Research",
+              "url": "https://www.theden.ai/solutions/academic-research"
+            }
+          ]
+        },
+        {
+          "heading": "Resources",
+          "links": [
+            {
+              "title": "Blog",
+              "url": "https://www.theden.ai/blog"
+            }
+          ]
+        }
+      ]
+    },
+    "toc": {
+      "title": "In this article",
+      "show": false
+    }
+  },
+  "theme": {
+    "colors": {
+      "primary": "#092635",
+      "textPrimary": "#000",
+      "textSecondary": "#fff",
+      "textTertiary": "#713aff",
+      "backgroundPrimary": "#fff",
+      "backgroundSecondary": "#16023e",
+      "accent": "#ff5cc5",
+      "border": "#d1d5db"
+    },
+    "typography": {
+      "fontSize": 16,
+      "fontFamily": "IBM Plex Sans",
+      "lineHeight": 1.5,
+      "h1": {
+        "margin": "0 0 1.5rem 0",
+        "padding": 0,
+        "fontSize": "3.62rem",
+        "fontWeight": 700,
+        "lineHeight": "4.25rem"
+      },
+      "h2": {
+        "margin": "0 0 2rem 0",
+        "padding": 0,
+        "fontSize": "2rem",
+        "fontWeight": 600,
+        "lineHeight": "2.25rem"
+      },
+      "h3": {
+        "margin": "2rem 0 2rem 0",
+        "padding": 0,
+        "fontSize": "1.25rem",
+        "fontWeight": 600,
+        "lineHeight": "1.625rem"
+      },
+      "h4": {
+        "margin": "0 0 1.5rem 0",
+        "padding": 0,
+        "fontSize": "1rem",
+        "fontWeight": 600,
+        "lineHeight": "1.375rem"
+      },
+      "h5": {
+        "margin": "0 0 1.5rem 0",
+        "padding": 0,
+        "fontSize": "1rem",
+        "fontWeight": 600,
+        "lineHeight": "1.375rem"
+      },
+      "h6": {
+        "margin": "0 0 1.5rem 0",
+        "padding": 0,
+        "fontSize": "1rem",
+        "fontWeight": 600,
+        "lineHeight": "1.375rem"
+      },
+      "p": {
+        "margin": "1.5rem 0 1.5rem 0",
+        "padding": 0,
+        "fontSize": "1.125rem",
+        "fontWeight": 400,
+        "lineHeight": "1.625rem"
+      }
+    }
+  }
+}

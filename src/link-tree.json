@@ -1,0 +1,36 @@
+{
+  "title": "Den ai blog",
+  "url": "/blog/",
+  "children": [
+    {
+      "title": ".components",
+      "children": [
+        {
+          "title": "All posts",
+          "children": []
+        },
+        {
+          "title": "Banner",
+          "children": []
+        },
+        {
+          "title": "Header",
+          "children": []
+        },
+        {
+          "title": "Toc",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Assets",
+      "children": []
+    },
+    {
+      "title": "The ultimate product demo guide for sales teams to close more deals",
+      "url": "/blog/the-ultimate-product-demo-guide-for-sales-teams-to-close-more-deals",
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "version": 1,
+  "tree": {
+    "nodeType": "dir",
+    "nodeName": "den-ai-blog",
+    "absPath": "/Users/shweta/fable/den-ai-blog/",
+    "children": [
+      {
+        "nodeType": "dir",
+        "nodeName": ".components",
+        "absPath": "/Users/shweta/fable/den-ai-blog/.components/",
+        "children": [
+          {
+            "nodeType": "file",
+            "nodeName": "Content.jsx",
+            "absPath": "/Users/shweta/fable/den-ai-blog/.components/Content.jsx",
+            "ext": ".jsx"
+          },
+          {
+            "nodeType": "file",
+            "nodeName": "CoverImg.jsx",
+            "absPath": "/Users/shweta/fable/den-ai-blog/.components/CoverImg.jsx",
+            "ext": ".jsx"
+          },
+          {
+            "nodeType": "file",
+            "nodeName": "LatestPosts.jsx",
+            "absPath": "/Users/shweta/fable/den-ai-blog/.components/LatestPosts.jsx",
+            "ext": ".jsx"
+          },
+          {
+            "nodeType": "file",
+            "nodeName": "Promotion.jsx",
+            "absPath": "/Users/shweta/fable/den-ai-blog/.components/Promotion.jsx",
+            "ext": ".jsx"
+          },
+          {
+            "nodeType": "file",
+            "nodeName": "PromotionBannerCta.jsx",
+            "absPath": "/Users/shweta/fable/den-ai-blog/.components/PromotionBannerCta.jsx",
+            "ext": ".jsx"
+          },
+          {
+            "nodeType": "dir",
+            "nodeName": "all-posts",
+            "absPath": "/Users/shweta/fable/den-ai-blog/.components/all-posts/",
+            "children": [
+              {
+                "nodeType": "file",
+                "nodeName": "AllPosts.jsx",
+                "absPath": "/Users/shweta/fable/den-ai-blog/.components/all-posts/AllPosts.jsx",
+                "ext": ".jsx"
+              },
+              {
+                "nodeType": "file",
+                "nodeName": "index.css",
+                "absPath": "/Users/shweta/fable/den-ai-blog/.components/all-posts/index.css",
+                "ext": ".css"
+              }
+            ]
+          },
+          {
+            "nodeType": "dir",
+            "nodeName": "banner",
+            "absPath": "/Users/shweta/fable/den-ai-blog/.components/banner/",
+            "children": [
+              {
+                "nodeType": "file",
+                "nodeName": "index.css",
+                "absPath": "/Users/shweta/fable/den-ai-blog/.components/banner/index.css",
+                "ext": ".css"
+              },
+              {
+                "nodeType": "file",
+                "nodeName": "index.jsx",
+                "absPath": "/Users/shweta/fable/den-ai-blog/.components/banner/index.jsx",
+                "ext": ".jsx"
+              }
+            ]
+          },
+          {
+            "nodeType": "dir",
+            "nodeName": "header",
+            "absPath": "/Users/shweta/fable/den-ai-blog/.components/header/",
+            "children": [
+              {
+                "nodeType": "file",
+                "nodeName": "Header.jsx",
+                "absPath": "/Users/shweta/fable/den-ai-blog/.components/header/Header.jsx",
+                "ext": ".jsx"
+              },
+              {
+                "nodeType": "file",
+                "nodeName": "index.css",
+                "absPath": "/Users/shweta/fable/den-ai-blog/.components/header/index.css",
+                "ext": ".css"
+              }
+            ]
+          },
+          {
+            "nodeType": "file",
+            "nodeName": "index.css",
+            "absPath": "/Users/shweta/fable/den-ai-blog/.components/index.css",
+            "ext": ".css"
+          },
+          {
+            "nodeType": "dir",
+            "nodeName": "toc",
+            "absPath": "/Users/shweta/fable/den-ai-blog/.components/toc/",
+            "children": [
+              {
+                "nodeType": "file",
+                "nodeName": "index.css",
+                "absPath": "/Users/shweta/fable/den-ai-blog/.components/toc/index.css",
+                "ext": ".css"
+              },
+              {
+                "nodeType": "file",
+                "nodeName": "index.jsx",
+                "absPath": "/Users/shweta/fable/den-ai-blog/.components/toc/index.jsx",
+                "ext": ".jsx"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nodeType": "file",
+        "nodeName": "README.md",
+        "absPath": "/Users/shweta/fable/den-ai-blog/README.md",
+        "ext": ".md",
+        "frontmatter": {},
+        "toc": [
+          {
+            "depth": 1,
+            "value": "den-ai-blog",
+            "data": {
+              "hProperties": {
+                "id": "den-ai-blog"
+              },
+              "id": "den-ai-blog"
+            }
+          }
+        ]
+      },
+      {
+        "nodeType": "dir",
+        "nodeName": "assets",
+        "absPath": "/Users/shweta/fable/den-ai-blog/assets/",
+        "children": [
+          {
+            "nodeType": "file",
+            "nodeName": "fable-logo.svg",
+            "absPath": "/Users/shweta/fable/den-ai-blog/assets/fable-logo.svg",
+            "ext": ".svg"
+          }
+        ]
+      },
+      {
+        "nodeType": "file",
+        "nodeName": "index.mdx",
+        "absPath": "/Users/shweta/fable/den-ai-blog/index.mdx",
+        "ext": ".mdx",
+        "frontmatter": {
+          "title": "The Den AI Blog",
+          "ogTitle": "The Den AI Blog",
+          "ogDescription": "A must follow blog for all the sales and marketing leaders."
+        },
+        "toc": []
+      },
+      {
+        "nodeType": "file",
+        "nodeName": "site.json",
+        "absPath": "/Users/shweta/fable/den-ai-blog/site.json",
+        "ext": ".json"
+      },
+      {
+        "nodeType": "file",
+        "nodeName": "the-ultimate-product-demo-guide-for-sales-teams-to-close-more-deals.mdx",
+        "absPath": "/Users/shweta/fable/den-ai-blog/the-ultimate-product-demo-guide-for-sales-teams-to-close-more-deals.mdx",
+        "ext": ".mdx",
+        "frontmatter": {
+          "title": "The Ultimate Product Demo Guide for Sales Teams to Close More Deals",
+          "subtitle": "In this comprehensive guide, we will dive into everything you want to know about product demos and how you can nail your demos to close more deals.",
+          "date": "January 10, 2024",
+          "bannerImg": "https://github.com/sid-patri-fable/fable-blog/assets/155963795/adbda461-871c-45e7-8583-559cd0cd42f3",
+          "ogTitle": "The Ultimate Product Demo Guide for Sales Teams to Close More Deals",
+          "ogDescription": "Wondering what product demos are and how they can boost your sales? Look no further! This ultimate guide provides valuable insights and strategies to help you master the art of product demos.",
+          "ogImage": "https://github.com/sid-patri-fable/fable-blog/assets/155963795/adbda461-871c-45e7-8583-559cd0cd42f3)"
+        },
+        "toc": [
+          {
+            "depth": 2,
+            "value": "What exactly is a product demo?",
+            "data": {
+              "hProperties": {
+                "id": "what-exactly-is-a-product-demo"
+              },
+              "id": "what-exactly-is-a-product-demo"
+            }
+          },
+          {
+            "depth": 2,
+            "value": "What is the significance of product demos?",
+            "data": {
+              "hProperties": {
+                "id": "what-is-the-significance-of-product-demos"
+              },
+              "id": "what-is-the-significance-of-product-demos"
+            }
+          },
+          {
+            "depth": 2,
+            "value": "Are product demos and sales demos the same?",
+            "data": {
+              "hProperties": {
+                "id": "are-product-demos-and-sales-demos-the-same"
+              },
+              "id": "are-product-demos-and-sales-demos-the-same"
+            }
+          },
+          {
+            "depth": 2,
+            "value": "At what stage in the sales process does a product demo typically occur?",
+            "data": {
+              "hProperties": {
+                "id": "at-what-stage-in-the-sales-process-does-a-product-demo-typically-occur"
+              },
+              "id": "at-what-stage-in-the-sales-process-does-a-product-demo-typically-occur"
+            }
+          },
+          {
+            "depth": 2,
+            "value": "How to create a high-converting and successful product demo?",
+            "data": {
+              "hProperties": {
+                "id": "how-to-create-a-high-converting-and-successful-product-demo"
+              },
+              "id": "how-to-create-a-high-converting-and-successful-product-demo"
+            }
+          },
+          {
+            "depth": 3,
+            "value": "1. Have a comprehensive understanding of both your customer and your product",
+            "data": {
+              "hProperties": {
+                "id": "1-have-a-comprehensive-understanding-of-both-your-customer-and-your-product"
+              },
+              "id": "1-have-a-comprehensive-understanding-of-both-your-customer-and-your-product"
+            }
+          },
+          {
+            "depth": 3,
+            "value": "2. Tailor your demo to fit the prospect's unique problem",
+            "data": {
+              "hProperties": {
+                "id": "2-tailor-your-demo-to-fit-the-prospects-unique-problem"
+              },
+              "id": "2-tailor-your-demo-to-fit-the-prospects-unique-problem"
+            }
+          },
+          {
+            "depth": 3,
+            "value": "3. Create an agenda for the demo",
+            "data": {
+              "hProperties": {
+                "id": "3-create-an-agenda-for-the-demo"
+              },
+              "id": "3-create-an-agenda-for-the-demo"
+            }
+          },
+          {
+            "depth": 3,
+            "value": "4. Talk less, listen more",
+            "data": {
+              "hProperties": {
+                "id": "4-talk-less-listen-more"
+              },
+              "id": "4-talk-less-listen-more"
+            }
+          },
+          {
+            "depth": 3,
+            "value": "5. Show, don't tell",
+            "data": {
+              "hProperties": {
+                "id": "5-show-dont-tell"
+              },
+              "id": "5-show-dont-tell"
+            }
+          },
+          {
+            "depth": 3,
+            "value": "6. Always follow-up with a crisp email after the product demo",
+            "data": {
+              "hProperties": {
+                "id": "6-always-follow-up-with-a-crisp-email-after-the-product-demo"
+              },
+              "id": "6-always-follow-up-with-a-crisp-email-after-the-product-demo"
+            }
+          },
+          {
+            "depth": 3,
+            "value": "7. Review and improve your demo",
+            "data": {
+              "hProperties": {
+                "id": "7-review-and-improve-your-demo"
+              },
+              "id": "7-review-and-improve-your-demo"
+            }
+          },
+          {
+            "depth": 2,
+            "value": "What are interactive product demos and how can you use them?",
+            "data": {
+              "hProperties": {
+                "id": "what-are-interactive-product-demos-and-how-can-you-use-them"
+              },
+              "id": "what-are-interactive-product-demos-and-how-can-you-use-them"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
