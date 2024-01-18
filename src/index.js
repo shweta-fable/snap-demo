@@ -10,7 +10,7 @@ import { hydrate, render } from "react-dom";
 
 const StrictApp = ()=>(
   <React.StrictMode>
-    <Suspense fallback={<>...</>}>
+    <Suspense fallback={<div/>}>
       <BrowserRouter>
         <App />
       </BrowserRouter>

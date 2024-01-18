@@ -6,16 +6,16 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 const Test = () => {
     return (
         <HelmetProvider>
-            <div className="App">
+            <div className="App" style={{backgroundColor:'pink'}}>
                 <Helmet title="Test">
                     <meta name="description" content="The content you are looking for cannot be found." />
                 </Helmet>
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <p>
-                        <a href='/products'>Test</a>
+                        <a href='/products'>a Test</a>
                     </p>
-                    <Link to="/products">Dashboard Home</Link>
+                    <Link to="/products">client Dashboard Home</Link>
                     <a
                         className="App-link"
                         href="https://reactjs.org"

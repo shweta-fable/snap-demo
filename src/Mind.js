@@ -1,11 +1,13 @@
-import { startTransition } from 'react';
+import { lazy, startTransition } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+
+const Another = lazy(()=> import('./Another'))
 
 const Mind = () => {
     return (
         <HelmetProvider>
-            <div className="App">
+            <div className="App" style={{backgroundColor:'yellow'}}>
                 <Helmet title="Minds">
                     <meta name="description" content="The content you are looking for minds be found." />
                 </Helmet>
@@ -16,16 +18,19 @@ const Mind = () => {
                     <div onClick={() => {
 
                     }}>
-                        <Link to="/">Dashboard Home</Link>
+                        <Link to="/">client Dashboard Home</Link>
                         <a
                             className="App-link"
                             href="/"
                             rel="noopener noreferrer"
                         >
-                            Minds page
+                             a Minds page
                         </a>
                     </div>
                 </header>
+                <div>
+                    <Another />
+                </div>
             </div>
         </HelmetProvider>
     )

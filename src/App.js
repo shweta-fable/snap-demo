@@ -2,14 +2,19 @@ import './App.css';
 import { Routes, Route, } from "react-router-dom";
 import Test from './Test.js';
 import Mind from './Mind';
-import { lazy } from 'react';
+import { lazy, useEffect } from 'react';
 import { startTransition } from 'react';
 import { Suspense } from 'react';
 const MindPreview = lazy(() => (import('./Mind.js')));
 const TestPreview = lazy(() => (import('./Test')));
 
-
 function App() {
+
+  useEffect(()=>{
+    console.log('mounted App')
+    return ()=> console.log('unmounted App');
+  },[])
+
   return (
     <div>
     <h1>Lazy Loading Example</h1>
