@@ -20,7 +20,9 @@ const appElement = (
 const rootElement = document.getElementById('root');
 
 if (rootElement.hasChildNodes()) {
+  console.log('in hyderate')
   hydrate(appElement, rootElement);
 } else {
+  console.log('in render')
   render(appElement, rootElement);
 }
