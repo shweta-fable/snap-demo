@@ -1,26 +1,16 @@
 'use strict';
 
-const fs = require('fs');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const paths = require('./paths');
-const getClientEnvironment = require('./env');
-
-// Some apps do not need the benefits of saving a web request, so not inlining the chunk
-// makes for a smoother build process.
-const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false';
 
 const imageInlineSizeLimit = parseInt(
   process.env.IMAGE_INLINE_SIZE_LIMIT || '10000'
 );
-
-// Get the path to the uncompiled service worker (if it exists).
-const swSrc = paths.swSrc;
 
 const hasJsxRuntime = (() => {
   if (process.env.DISABLE_NEW_JSX_TRANSFORM === 'true') {
@@ -38,52 +28,28 @@ const hasJsxRuntime = (() => {
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
 module.exports = function (webpackEnv) {
-  const isEnvDevelopment = webpackEnv === 'development';
-  const isEnvProduction = webpackEnv === 'production';
+  // const isEnvProduction = webpackEnv === 'production';
 
-  // We will provide `paths.publicUrlOrPath` to our app
-  // as %PUBLIC_URL% in `index.html` and `process.env.PUBLIC_URL` in JavaScript.
-  // Omit trailing slash as %PUBLIC_URL%/xyz looks better than %PUBLIC_URL%xyz.
-  // Get environment variables to inject into our app.
-  const env = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));
-
-  // common function to get style loaders
-  const getStyleLoaders = (cssOptions, preProcessor) => {
-    const loaders = [
-      isEnvDevelopment && require.resolve('style-loader'),
-      isEnvProduction && {
-        loader: MiniCssExtractPlugin.loader,
-        // css is located in `static/css`, use '../../' to locate index.html folder
-        // in production `paths.publicUrlOrPath` can be a relative path
-        options: paths.publicUrlOrPath.startsWith('.')
-          ? { publicPath: '../../' }
-          : {},
-      },
-      {
-        loader: require.resolve('css-loader'),
-        options: cssOptions,
-      },
-    ].filter(Boolean);
-    if (preProcessor) {
-      loaders.push(
-        {
-          loader: require.resolve('resolve-url-loader'),
-          options: {
-            sourceMap: false,
-            root: paths.appSrc,
-          },
-        },
-        {
-          loader: require.resolve(preProcessor),
-          options: {
-            sourceMap: true,
-          },
-        }
-      );
+  const env =  {
+    raw: {
+      NODE_ENV: 'production',
+      PUBLIC_URL: '',
+      WDS_SOCKET_HOST: undefined,
+      WDS_SOCKET_PATH: undefined,
+      WDS_SOCKET_PORT: undefined,
+      FAST_REFRESH: true
+    },
+    stringified: {
+      'process.env': {
+        NODE_ENV: '"production"',
+        PUBLIC_URL: '""',
+        WDS_SOCKET_HOST: undefined,
+        WDS_SOCKET_PATH: undefined,
+        WDS_SOCKET_PORT: undefined,
+        FAST_REFRESH: 'true'
+      }
     }
-    return loaders;
-  };
-
+  }
   return {
     target: ['browserslist'],
     // Webpack noise constrained to errors and warnings
@@ -239,7 +205,7 @@ module.exports = function (webpackEnv) {
                 cacheDirectory: true,
                 // See #6846 for context on why cacheCompression is disabled
                 cacheCompression: false,
-                compact: isEnvProduction,
+                // compact: isEnvProduction,
               },
             },
             // Process any JS outside of the app with Babel.
@@ -269,22 +235,28 @@ module.exports = function (webpackEnv) {
                 inputSourceMap: false,
               },
             },
-            // "postcss" loader applies autoprefixer to our CSS.
-            // "css" loader resolves paths in CSS and adds assets as dependencies.
-            // "style" loader turns CSS into JS modules that inject <style> tags.
-            // In production, we use MiniCSSExtractPlugin to extract that CSS
-            // to a file, but in development "style" loader enables hot editing
-            // of CSS.
-            // By default we support CSS Modules with the extension .module.css
             {
               test: /\.css$/,
-              use: getStyleLoaders({
-                importLoaders: 1,
-                sourceMap: false,
-                modules: {
-                  mode: 'icss',
+              use: [
+                {
+                  loader: MiniCssExtractPlugin.loader,
+                  // css is located in `static/css`, use '../../' to locate index.html folder
+                  // in production `paths.publicUrlOrPath` can be a relative path
+                  options: paths.publicUrlOrPath.startsWith('.')
+                    ? { publicPath: '../../' }
+                    : {},
                 },
-              }),
+                {
+                  loader: require.resolve('css-loader'),
+                  options: {
+                    importLoaders: 1,
+                    sourceMap: false,
+                    modules: {
+                      mode: 'icss'
+                    }
+                  }
+                }
+              ],
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
               // Remove this when webpack adds a warning or an error for this.
@@ -319,36 +291,36 @@ module.exports = function (webpackEnv) {
             inject: true,
             template: paths.appHtml,
           },
-          isEnvProduction
-            ? {
-              minify: {
-                removeComments: true,
-                collapseWhitespace: true,
-                removeRedundantAttributes: true,
-                useShortDoctype: true,
-                removeEmptyAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                keepClosingSlash: true,
-                minifyJS: true,
-                minifyCSS: true,
-                minifyURLs: true,
-              },
-            }
-            : undefined
+          // isEnvProduction
+          //   ? {
+          //     minify: {
+          //       removeComments: true,
+          //       collapseWhitespace: true,
+          //       removeRedundantAttributes: true,
+          //       useShortDoctype: true,
+          //       removeEmptyAttributes: true,
+          //       removeStyleLinkTypeAttributes: true,
+          //       keepClosingSlash: true,
+          //       minifyJS: true,
+          //       minifyCSS: true,
+          //       minifyURLs: true,
+          //     },
+          //   }
+          //   : undefined
         )
       ),
       // Inlines the webpack runtime script. This script is too small to warrant
       // a network request.
       // https://github.com/facebook/create-react-app/issues/5358
-      isEnvProduction &&
-      shouldInlineRuntimeChunk &&
-      new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime-.+[.]js/]),
+      // isEnvProduction &&
+      // shouldInlineRuntimeChunk &&
+      // new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime-.+[.]js/]),
       // Makes some environment variables available in index.html.
       // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
       // <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
       // It will be an empty string unless you specify "homepage"
       // in `package.json`, in which case it will be the pathname of that URL.
-      new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
+      // new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
       // Makes some environment variables available to the JS code, for example:
       // if (process.env.NODE_ENV === 'production') { ... }. See `./env.js`.
       // It is absolutely essential that NODE_ENV is set to production
@@ -364,17 +336,17 @@ module.exports = function (webpackEnv) {
       }),
       // Generate a service worker script that will precache, and keep up to date,
       // the HTML & assets that are part of the webpack build.
-      isEnvProduction &&
-      fs.existsSync(swSrc) &&
-      new WorkboxWebpackPlugin.InjectManifest({
-        swSrc,
-        dontCacheBustURLsMatching: /\.[0-9a-f]{8}\./,
-        exclude: [/\.map$/, /asset-manifest\.json$/, /LICENSE/],
-        // Bump up the default maximum size (2mb) that's precached,
-        // to make lazy-loading failure scenarios less likely.
-        // See https://github.com/cra-template/pwa/issues/13#issuecomment-722667270
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
-      }),
+      // isEnvProduction &&
+      // fs.existsSync(swSrc) &&
+      // new WorkboxWebpackPlugin.InjectManifest({
+      //   swSrc,
+      //   dontCacheBustURLsMatching: /\.[0-9a-f]{8}\./,
+      //   exclude: [/\.map$/, /asset-manifest\.json$/, /LICENSE/],
+      //   // Bump up the default maximum size (2mb) that's precached,
+      //   // to make lazy-loading failure scenarios less likely.
+      //   // See https://github.com/cra-template/pwa/issues/13#issuecomment-722667270
+      //   maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+      // }),
     ].filter(Boolean),
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter
