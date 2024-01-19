@@ -1,3 +1,4 @@
+// Required only in development - npm run start - not related to prod
 'use strict';
 
 const fs = require('fs');
